@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import Card from "./components/Card";
@@ -16,9 +16,20 @@ function App() {
       });
   };
 
+useEffect(() => {
+  fetchUserData();
+  console.log(users)
+
+},[])  
+
+
   return (
     <div className="App bg-slate-200 flex items-center justify-center p-10">
+     { users.map(user=> {
       <Card />
+     })
+      
+     }
     </div>
   );
 }
