@@ -3,7 +3,7 @@ import React from "react";
 
 const Card = (props) => {
   return (
-    <div className="bg-slate-50 rounded-lg w-[280px] min-h-[330px] shadow-xl p-3 m-5">
+    <div className="bg-slate-50 rounded-lg min-w-[280px] sm:w-[280px] min-h-[330px] shadow-xl p-3 m-5">
       <div className="w-full flex justify-center ">
         <div className="bg-slate-500 h-[70px] w-[70px] rounded-full shadow-md m-2">
           <img src="" alt="" />
