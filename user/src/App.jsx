@@ -18,18 +18,14 @@ function App() {
 
 useEffect(() => {
   fetchUserData();
-  console.log(users)
 
 },[])  
 
-
   return (
-    <div className="App bg-slate-200 flex items-center justify-center p-10">
-     { users.map(user=> {
-      <Card />
-     })
-      
-     }
+    <div className="App bg-slate-200 max-w-7xl mx-auto flex-wrap flex items-center justify-center p-10">
+      {users.map(user => (
+        <Card key={user.id} user={user} />
+      ))}
     </div>
   );
 }
